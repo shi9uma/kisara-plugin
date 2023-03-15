@@ -2,24 +2,24 @@
 
 ## 使用方法
 
-在本插件的 `./config/chat.chat.yaml` 中配置好相关内容，重启 bot 就能使用
+在本插件的 `./config/chat.chat.yaml` 中配置好相关内容，由于是热加载, 不需要重启 bot 就能使用
 
 ## 自行修改
 
--   在提供的 xls 文件中，将 `(me)` 修改成机器人对自己的称呼，例如 bot 的名字、我、咱等
--   将 `(name)` 替换为 bot 对聊天对象的称呼
--   如果有 `(segment)` 项，表示需要将句子切分成多次发送
+-   在提供的 json 文件中，将 `{me}` 修改成机器人对自己的称呼，例如 bot 的名字、我、咱等
+-   将 `{name}` 替换为 bot 对聊天对象的称呼
+-   如果有 `{segment}` 项，表示需要将句子切分成多次发送
 
-## 导入其他文件
+## 导入其他词库文件
 
-将词库放到 `./data/chatLibrary/raw` 文件夹，使用 `./data/chatLibrary/converter.py` 将 xls 类型的文件生成为可识别的 json 文件，默认提供了 xls 词库
+将词库 `.csv` 后缀的文件放到 `./data/chatLibrary/raw` 文件夹，使用 `./data/chatLibrary/converter.py` 将 csv 类型的文件生成为可识别的 json 文件，默认提供了 csv 词库
+
+csv 文件要求 utf-8 格式, 可以用 microsoft excel 转换保存
 
 ## 致谢
 
-[词库来源](https://mirai.mamoe.net/topic/1829/强大的二次元聊天机器人词库2w-词条-不定期更新)
+[词库来源](https://mirai.mamoe.net/topic/1829/强大的二次元聊天机器人词库2w-词条-不定期更新), 以及来自提供者的信息：
 
->   来自提供者的信息：
->
 >   以下是本人与其他聊天机器人爱好者一同开发编写的两种类型词库，包含：
 >
 >   1、可爱系二次元bot词库；
